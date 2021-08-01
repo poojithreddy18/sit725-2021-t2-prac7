@@ -1,0 +1,22 @@
+{
+  "name": "sit725-2021-t2-prac3",
+  "version": "1.0.0",
+  "description": "webpage creation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poojithreddy18/sit725-2021-t2-prac3.git"
+  },
+  "author": "poojithreddykondam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poojithreddy18/sit725-2021-t2-prac3/issues"
+  },
+  "homepage": "https://github.com/poojithreddy18/sit725-2021-t2-prac3#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
