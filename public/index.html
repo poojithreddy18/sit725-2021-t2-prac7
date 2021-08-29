@@ -1,101 +1,114 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Wonder Consultancy</title>
 
+    <!-- Compiled and minified CSS -->
+    <!-- Materialze-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <!-- Materialize icons-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/styles.css">
-
+    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav>
-        <div class="nav-wrapper navbar-size">
-            <a href="#" class="brand-logo"><img class="user-image-size" src="images/wonder.jpg" /></a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a class="lidin" target="_blank" href="https://www.linkedin.com/in/poojith-reddy-438104152/">LinkedIn</a></li>
-            </ul>
-        </div>
-    </nav>
-    <main class="main-body">
-        <div class="container">
-            <div class="row">
-                <div class="col s12 center-align">
-                    <h1 id="heading">Wonder educational consultancy</h1>
-                    <p class="flow-text">Best consultancy for higher eductaion in abroad.</p>
-                </div>
-                <div class="col s12 center-align">
-                    <a class="btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i
-                            class="material-icons left">auto_fix_high</i>Click Me</a>
-                </div>
-            </div>
-            <div class="row" id="card-section">
-                <div class="col s4 center-align">
-                    <div class="card medium">
-                        <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="images/usa.png">
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">USA<i
-                                    class="material-icons right">more_vert</i></span>
-                            <p><a href="#">Best universities in USA</a></p>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4">USA<i
-                                    class="material-icons right">close</i></span>
-                            <p class="card-text">George Manson University<br>University of Texas<br>University of Newyork<br>Stanford University</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="modal1" class="modal modal-fixed-footer">
-            <div class="row modal-content">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input placeholder="Placeholder" id="title" type="text" class="validate">
-                            <label for="title">Title</label>
-                        </div>
-                        <div class="input-field col s6">
-                            <input id="image" type="text" class="validate">
-                            <label for="image">Image</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="link" type="text" class="validate">
-                            <label for="link">Link</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="description" type="text" class="validate">
-                            <label for="description">Description</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12 center-align">
-                            <a class="waves-effect waves-light btn" id="formSubmit">submit</a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <header>
+        <nav>
+            <div class="nav-wrapper" style=" background-color: #9E65A9;">
+                <a href="#" class="brand-logo" style="height: 100%;">
+                    <img src="assets/wonder.jpg" alt="" class="circle responsive-img"
+                        style="height: 100%;padding-top: 5px; padding-left: 15px;">
 
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="https://au.linkedin.com/in/poojith-reddy-438104152">Linkedin</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <div class="container">
+            <h1 class="title">Wonder Consultancy</h1>
+            <div class="row">
+                <p class="flow-text mainText">Best consultancy for studies in abroad.</p>
+            </div>
+        </div> 
+        <div class="row center " style="padding-top:50px;">
+            <a id="testButton" class="waves-effect waves-light btn-large modal-trigger" href="#modal1"
+                style="background-color: #9E65A9;"><i class="material-icons left"
+                    style="color:white; font-size:larger ">emoji_people</i>Add Project</a>
+        </div>
+
+        <div class="container">
+            <div class="row" id="listProjects">
+
+
+            </div>
+        </div>
+
+
+        </div>
+
+    </main>
+    <footer class="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2021 Copyright Poojith Reddy
+            </div>
+        </div>
+    </footer>
+
+    <!-- socket IO Served by the server -->
+    <script src="/socket.io/socket.io.js"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="js/scripts.js"></script>
+
+    <script src="env.js"></script>
+
 </body>
 
 </html>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <div class="input-field col s12">
+                <input value="" id="name" type="text" class="validate">
+                <label class="name" for="name">Name</label>
+            </div>
+            <div class="input-field col s12">
+                <input value="" id="title" type="text" class="validate">
+                <label class="title" for="title">Project Title</label>
+            </div>
+            <div class="input-field col s12">
+                <input value="" id="description" type="text" class="validate">
+                <label class="description" for="description">Project Description</label>
+            </div>
+            <div class="input-field col s12">
+                <input value="" id="video" type="text" class="validate">
+                <label class="video" for="video">Video Url </label>
+            </div>
+            <div class="input-field col s12">
+                <input value="" id="image" type="text" class="validate">
+                <label class="image" for="image">Image Url</label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a onclick="newProject()" href="#!" class="modal-close waves-effect waves-green btn-flat">Submit</a>
+    </div>
+</div>
