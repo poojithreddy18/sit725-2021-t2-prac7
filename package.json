@@ -1,17 +1,19 @@
 {
-  "name": "prac5",
+  "name": "prac6",
   "version": "1.0.0",
   "description": "",
   "main": "dbConnect.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --reporter spec",
     "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.4",
     "dotnet": "^1.1.4",
     "express": "^4.17.1",
+    "mocha": "^9.1.1",
     "mongodb": "^4.1.1"
   }
 }
