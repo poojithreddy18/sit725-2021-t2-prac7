@@ -1,7 +1,7 @@
 let client = require("../dbConnect");
 let projectsCollection;
 setTimeout(() => {
-    projectsCollection = client.mongoClient.db("mernStack").collection("projects");
+    projectsCollection = client.mongoClient.db("wonderconsultancies").collection("projects");
 
 }, 2000)
 
